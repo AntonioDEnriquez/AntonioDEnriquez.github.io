@@ -36,7 +36,6 @@ self.addEventListener('fetch', async e => {
     if (req.method === "POST") {
         return;
     } else {
-        console.log(req);
         if (url.origin == location.origin) {
             e.respondWith(cacheFirst(req));
         } else {
@@ -59,21 +58,16 @@ async function cacheFirst(req) {
 async function networkAndCache(req) {
     console.log(req);
     if (req.method === "POST") {
-        console.log('Here');
         return;
     } else {
         const cache = await caches.open(cacheName);
-        console.log(cache);
         try {
-            console.log('ACA');
 
             const fresh = await fetch(req);
-            console.log(fresh);
             await cache.put(req, fresh.clone());
             return fresh;
 
         } catch (error) {
-            console.log(error);
             const cached = await cache.match(req);
             return cached;
         }
