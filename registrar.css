@@ -1,0 +1,121 @@
+#container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    width: 85%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5rem;
+
+}
+
+
+
+#formulario {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.form-control {
+    font-size: 16px !important;
+}
+
+#fields {
+    text-align: left;
+    width: 100%;
+}
+
+#input {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 2rem;
+}
+
+input, select {
+    width: 100%;
+    height: 3rem;
+    border-style: none;
+    border-radius: 5px;
+}
+
+img {
+    width: 80%;
+}
+
+#boton {
+    width: 15rem;
+    height: 4vh;
+    background-color: #7B1FA2;
+    color: white;
+    border-color: #7B1FA2;
+}
+
+@media (min-width: 768px) {
+    #container {
+        margin-top: 15rem;
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        width: 90%;
+        margin-left: 10rem;
+    }
+
+    #formulario {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    #fields {
+        text-align: left;
+        width: 100%;
+    }
+
+    #input {
+        color: white;
+        font-size: 16px;
+        margin-bottom: 2rem;
+    }
+
+    input, select {
+        width: 100%;
+        height: 3rem;
+        border-style: none;
+        border-radius: 5px;
+    }
+
+    img {
+        width: 80%;
+    }
+
+    #boton {
+        width: 15rem;
+        height: 4vh;
+        border-radius: 5px;
+        background-color: #7B1FA2;
+        color: white;
+        border-color: #7B1FA2;
+    }
+}
+
+.alerta {
+    padding: 5rem / 2;
+    text-align: center;
+    color: white;
+    width: 100%;
+    display: block;
+
+}
+
+.error {
+    background-color: rgb(194, 0, 0);
+}

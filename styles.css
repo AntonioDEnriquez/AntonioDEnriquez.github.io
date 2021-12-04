@@ -1,0 +1,60 @@
+#heroes {
+    margin-top: 13rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-between;
+    width: 100%;
+}
+
+#card {
+    width: 100%;
+    height: max-content;
+    color: white;
+    background-color: #424242;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#img {
+    width: 100%;
+    background-size: cover;
+    margin-top: 2rem;
+
+}
+
+#text {
+    margin-left: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 18px;
+}
+
+@media (min-width: 768px) {
+
+
+    #heroes {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    #card {
+        width: 100%;
+        color: white;
+        background-color: #424242;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #img {
+        width: 100%;
+        background-size: cover;
+
+    }
+
+
+}

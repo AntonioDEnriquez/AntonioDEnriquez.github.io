@@ -1,0 +1,14 @@
+{
+    "name": "Heroes",
+    "short-name": "Heroes",
+    "start_url": ".",
+    "display": "standalone",
+    "description": "Aplicación para registrar y ver heroes",
+    "icons": [
+        {
+            "src": "logo.png",
+            "sizes": "1024x1024",
+            "type": "image/png"
+        }
+    ]
+}
