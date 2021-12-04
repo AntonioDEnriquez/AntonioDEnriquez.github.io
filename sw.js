@@ -12,7 +12,6 @@ const staticAssets = [
     './styles.css',
     './registrar.css',
     './app.js',
-    './registrar.js'
 ];
 
 /* Se auto esucha y va a solicitar la instalacion, le mandamos una promesa y
@@ -34,31 +33,51 @@ self.addEventListener('fetch', async e => {
     const req = e.request;
     const url = new URL(req.url);
 
-    if (url.origin == location.origin) {
-        e.respondWith(cacheFirst(req));
+    if (req.method === "POST") {
+        return;
     } else {
-        e.respondWith(networkAndCache(req));
+        console.log(req);
+        if (url.origin == location.origin) {
+            e.respondWith(cacheFirst(req));
+        } else {
+            e.respondWith(networkAndCache(req));
+        }
     }
+
 });
 
 async function cacheFirst(req) {
-    const cache = await caches.open(cacheName);
-    const cached = await cache.match(req);
-    return cached || fetch(req);
+    if (req.method === "POST") {
+        return;
+    } else {
+        const cache = await caches.open(cacheName);
+        const cached = await cache.match(req);
+        return cached || fetch(req);
+    }
 }
 
 async function networkAndCache(req) {
-    const cache = await caches.open(cacheName);
+    console.log(req);
+    if (req.method === "POST") {
+        console.log('Here');
+        return;
+    } else {
+        const cache = await caches.open(cacheName);
+        console.log(cache);
+        try {
+            console.log('ACA');
 
-    try {
-        const fresh = await fetch(req);
-        await cache.put(req, fresh.clone());
-        return fresh;
+            const fresh = await fetch(req);
+            console.log(fresh);
+            await cache.put(req, fresh.clone());
+            return fresh;
 
-    } catch (error) {
-        console.log(error);
-        const cached = await cache.match(req);
-        return cached;
+        } catch (error) {
+            console.log(error);
+            const cached = await cache.match(req);
+            return cached;
+        }
     }
+
 
 }

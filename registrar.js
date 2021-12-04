@@ -180,15 +180,7 @@ function mostrarAlerta(mensaje, tipo) {
     }, 3000);
 }
 
-async function registrarSW() {
-    if ('serviceWorker' in navigator) {
-        try {
-            await navigator.serviceWorker.register('./sw.js');
-        } catch (error) {
 
-        }
-    }
-}
 
 
 
