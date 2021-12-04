@@ -37,7 +37,6 @@ async function mostrarHeroes() {
 
             heroes.innerHTML = html;
         });
-
 }
 
 

@@ -94,8 +94,6 @@ function Characters() {
     })
 }
 
-
-
 function Image() {
     const image = document.querySelector('#fotourl');
     image.addEventListener('input', event => {
@@ -133,8 +131,6 @@ function Send() {
         }
         heroe.publisher = creadortext;
     }
-
-
 
     const url = 'http://www.heroesappi.somee.com/api/heroes';
 
