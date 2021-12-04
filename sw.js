@@ -56,7 +56,6 @@ async function cacheFirst(req) {
 }
 
 async function networkAndCache(req) {
-    console.log(req);
     if (req.method === "POST") {
         return;
     } else {
