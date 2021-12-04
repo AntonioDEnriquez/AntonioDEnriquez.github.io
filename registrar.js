@@ -136,7 +136,7 @@ function Send() {
 
 
 
-    const url = 'https://www.heroesappi.somee.com/api/heroes';
+    const url = 'http://www.heroesappi.somee.com/api/heroes';
 
     if (heroe.superhero === '' || heroe.alt_img === '' || heroe.alter_ego === '' || heroe.characters === '' || heroe.publisher === ''
         || heroe.first_appearance === '') {

@@ -10,7 +10,7 @@ function iniciarApp() {
 
 async function mostrarHeroes() {
 
-    fetch("https://www.heroesappi.somee.com/api/heroes")
+    fetch("http://www.heroesappi.somee.com/api/heroes")
         .then(response => response.json())
         .then(data => {
             let html = '';
